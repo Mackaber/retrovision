@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroVision</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass"> 
+        <h1>retrovision</h1>
+        <div class="grid-container">
+            <div id="sources">
+                <video id="video" class="crt hide filterable" controls>
+                    Video stream not available.
+                </video>
+                <video id="recorded" class="filterable" src="VID.mp4" controls loop></video>
+            </div>      
+            <div id="sliders">
+                <label>Source: </label>
+                <select id="source">
+                    <option value="recorded" selected>Recorded</option>
+                    <option value="video">Video</option>
+                </select>
+                <br><br>
+                <label id="blur_label">Blur: 0</label><br />
+                <input type="range" min="0" max="100" value="0" class="slider" id="blur_range">
+                <br /> 
+                <label id="saturate_label">Saturation: 0</label><br />
+                <input type="range" min="0" max="100" value="10" class="slider" id="saturate_range">
+                <br /> 
+                <label id="brightness_label">Brightness: 0</label><br />
+                <input type="range" min="0" max="100" value="10" class="slider" id="brightness_range">
+                <br /> 
+                <label id="contrast_label">Contrast: 0</label><br />
+                <input type="range" min="0" max="100" value="10" class="slider" id="contrast_range">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
